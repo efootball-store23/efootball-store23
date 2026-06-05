@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EFootball Store 23</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EFootball Store Pro</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
 </head>
+
 <body>
-<header>
-<img src="logo.png" class="logo">
-<h1>EFootball Store 23</h1>
-<p>بيع وشراء حسابات eFootball Mobile</p>
+
+<header class="navbar">
+  <h1>⚽ EFootball Store Pro</h1>
+  <nav>
+    <a href="#accounts">الحسابات</a>
+    <a href="#sell">بيع حساب</a>
+    <a href="#admin">إضافة</a>
+  </nav>
 </header>
 
-<section class="card">
-<h2>حساب للبيع</h2>
-<p>Epic Messi - 3000 DZD</p>
-<button onclick="buyAccount()">شراء الآن</button>
+<section class="hero">
+  <h2>🔥 أفضل حسابات eFootball للبيع</h2>
+  <p>أسعار قوية • حسابات نادرة • تسليم فوري</p>
 </section>
 
-<section class="card">
-<h2>بيع حسابك</h2>
-<input id="name" placeholder="الاسم"><br>
-<input id="phone" placeholder="رقم الهاتف"><br>
-<input id="desc" placeholder="وصف الحساب"><br>
-<input type="file"><br>
-<button onclick="sellAccount()">إرسال إلى واتساب</button>
+<!-- ACCOUNTS -->
+<section id="accounts" class="section">
+  <h2>الحسابات المتاحة</h2>
+  <div id="accountsContainer" class="grid"></div>
 </section>
 
-<script src="script.js"></script>
+<!-- SELL -->
+<section id="sell" class="section">
+  <h2>بيع حسابك</h2>
+  <a class="btn" href="https://wa.me/213000000000">تواصل واتساب</a>
+</section>
+
+<!-- ADMIN -->
+<section id="admin" class="section">
+  <h2>لوحة الإضافة (Admin)</h2>
+
+  <input id="title" placeholder="عنوان الحساب">
+  <input id="price" placeholder="السعر">
+  <input id="desc" placeholder="الوصف">
+  <input id="image" placeholder="رابط الصورة">
+
+  <button class="btn" onclick="addAccount()">إضافة</button>
+</section>
+
+<script src="firebase-config.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
