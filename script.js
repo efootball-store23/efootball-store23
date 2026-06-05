@@ -1,8 +1,10 @@
+import { db, collection, addDoc, onSnapshot } from "./firebase-config.js";
+
 const container = document.getElementById("accountsContainer");
 
 // عرض الحسابات
 function loadAccounts() {
-  db.collection("accounts").onSnapshot((snap) => {
+  onSnapshot(collection(db, "accounts"), (snap) => {
     container.innerHTML = "";
 
     snap.forEach(doc => {
@@ -24,21 +26,21 @@ function loadAccounts() {
   });
 }
 
-// شراء عبر واتساب
-function buy(title, price) {
+// شراء واتساب
+window.buy = function(title, price) {
   const phone = "213000000000";
   const msg = `أريد شراء: ${title} بسعر ${price}`;
   window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
 }
 
-// إضافة حساب (Admin)
-function addAccount() {
+// إضافة حساب
+window.addAccount = async function() {
   const title = document.getElementById("title").value;
   const price = document.getElementById("price").value;
   const desc = document.getElementById("desc").value;
   const image = document.getElementById("image").value;
 
-  db.collection("accounts").add({
+  await addDoc(collection(db, "accounts"), {
     title,
     price,
     description: desc,
