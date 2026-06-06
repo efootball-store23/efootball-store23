@@ -1,0 +1,310 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#07142c;
+color:white;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+/* Navbar */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo{
+width:70px;
+height:70px;
+border-radius:15px;
+box-shadow:0 0 25px #00ffd0;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+font-weight:700;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#00ffd0;
+}
+
+/* Hero */
+
+.hero{
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+text-align:center;
+padding-top:140px;
+width:90%;
+max-width:900px;
+margin:auto;
+}
+
+.hero-content h1{
+font-size:4rem;
+margin-bottom:20px;
+text-shadow:0 0 30px #00ffd0;
+}
+
+.hero-content p{
+font-size:1.2rem;
+color:#d8d8d8;
+line-height:1.8;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 40px;
+background:#00ffd0;
+color:#000;
+font-weight:800;
+border-radius:50px;
+transition:.3s;
+}
+
+.hero-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 0 30px #00ffd0;
+}
+
+/* Stats */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:60px 8%;
+}
+
+.stat{
+background:#0e2347;
+padding:30px;
+text-align:center;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.1);
+}
+
+.stat h2{
+font-size:2.4rem;
+color:#00ffd0;
+margin-bottom:10px;
+}
+
+/* Sections */
+
+.section-title{
+text-align:center;
+font-size:2.4rem;
+margin:50px 0;
+color:#00ffd0;
+}
+
+/* Accounts */
+
+.accounts-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+padding:0 8% 80px;
+}
+
+.account-card{
+background:#10254b;
+border-radius:25px;
+overflow:hidden;
+transition:.3s;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.account-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 35px rgba(0,255,208,.35);
+}
+
+.account-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.account-info{
+padding:20px;
+}
+
+.account-info h3{
+font-size:1.5rem;
+margin-bottom:10px;
+}
+
+.account-info p{
+color:#cfcfcf;
+margin-bottom:15px;
+line-height:1.7;
+}
+
+.account-info h2{
+color:#00ffd0;
+margin-bottom:20px;
+}
+
+.buy-btn{
+width:100%;
+padding:14px;
+border:none;
+border-radius:12px;
+font-size:1rem;
+font-weight:800;
+cursor:pointer;
+background:#00ffd0;
+color:#000;
+transition:.3s;
+}
+
+.buy-btn:hover{
+box-shadow:0 0 25px #00ffd0;
+}
+
+/* Payments */
+
+.payments{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+padding:0 8%;
+}
+
+.payment-card{
+background:#10254b;
+padding:25px 40px;
+border-radius:20px;
+font-size:1.2rem;
+font-weight:700;
+}
+
+.payment-note{
+text-align:center;
+margin-top:25px;
+color:#bfbfbf;
+}
+
+/* Sell Form */
+
+.sell-form{
+width:90%;
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+padding-bottom:80px;
+}
+
+.sell-form input,
+.sell-form textarea{
+padding:15px;
+border:none;
+border-radius:12px;
+background:#10254b;
+color:white;
+font-size:1rem;
+}
+
+.sell-form textarea{
+height:140px;
+resize:none;
+}
+
+.sell-form button{
+padding:15px;
+border:none;
+border-radius:12px;
+background:#00ffd0;
+color:black;
+font-weight:800;
+cursor:pointer;
+font-size:1rem;
+}
+
+/* WhatsApp */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+left:25px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:2rem;
+box-shadow:0 0 25px #25D366;
+z-index:999;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:20px;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero-content h1{
+font-size:2.5rem;
+}
+
+.hero-content p{
+font-size:1rem;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+}
