@@ -26,7 +26,9 @@ async function loadAccounts() {
     container.innerHTML += `
       <div class="account-card">
 
-        <img src="${acc.image}" alt="${acc.name}">
+        <a href="${acc.image}" target="_blank">
+  <img src="${acc.image}" alt="${acc.name}">
+</a>
 
         <div class="account-info">
 
