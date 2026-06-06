@@ -1,0 +1,278 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(180deg,#071126,#0b1831,#071126);
+color:white;
+min-height:100vh;
+}
+
+.hero{
+padding:30px 20px 80px;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1600&auto=format&fit=crop");
+background-size:cover;
+background-position:center;
+text-align:center;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.logo{
+width:110px;
+border-radius:18px;
+box-shadow:0 0 25px #00bfff;
+}
+
+.navbar ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+.navbar a{
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:.3s;
+}
+
+.navbar a:hover{
+color:#00c8ff;
+}
+
+.hero-content{
+margin-top:60px;
+}
+
+.hero-content h1{
+font-size:55px;
+font-weight:800;
+text-shadow:0 0 20px #00c8ff;
+}
+
+.hero-content p{
+font-size:18px;
+margin-top:15px;
+opacity:.9;
+}
+
+.main-btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 30px;
+background:linear-gradient(90deg,#00bfff,#7b2cff);
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+box-shadow:0 0 25px rgba(0,191,255,.6);
+transition:.3s;
+}
+
+.main-btn:hover{
+transform:translateY(-3px);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:30px;
+max-width:1000px;
+margin:auto;
+margin-top:-40px;
+}
+
+.stat-box{
+background:#101c38;
+padding:25px;
+border-radius:18px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 0 25px rgba(0,191,255,.15);
+}
+
+.stat-box h2{
+font-size:35px;
+color:#00c8ff;
+}
+
+.section-title{
+text-align:center;
+font-size:35px;
+margin:50px 0 30px;
+}
+
+#accounts-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+padding:25px;
+max-width:1400px;
+margin:auto;
+}
+
+.account-card{
+background:#101c38;
+border-radius:18px;
+overflow:hidden;
+transition:.3s;
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 0 20px rgba(0,191,255,.08);
+}
+
+.account-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(0,191,255,.35);
+}
+
+.account-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.account-info{
+padding:18px;
+}
+
+.account-info h3{
+margin-bottom:10px;
+font-size:22px;
+}
+
+.account-info p{
+opacity:.85;
+line-height:1.7;
+}
+
+.account-info h2{
+margin-top:15px;
+color:#00ff88;
+}
+
+.buy-btn{
+width:100%;
+margin-top:15px;
+padding:14px;
+border:none;
+border-radius:12px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+background:linear-gradient(90deg,#00d26a,#00ff88);
+color:#001b09;
+transition:.3s;
+}
+
+.buy-btn:hover{
+transform:scale(1.03);
+}
+
+#payments{
+padding:40px 20px;
+text-align:center;
+}
+
+.payment-card{
+max-width:450px;
+margin:15px auto;
+background:#101c38;
+padding:18px;
+border-radius:15px;
+font-size:20px;
+box-shadow:0 0 20px rgba(123,44,255,.25);
+}
+
+.payment-note{
+margin-top:15px;
+opacity:.8;
+}
+
+#sell{
+padding:40px 20px;
+max-width:700px;
+margin:auto;
+}
+
+#sell input,
+#sell textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:12px;
+background:#101c38;
+color:white;
+outline:none;
+}
+
+#sell textarea{
+height:130px;
+resize:none;
+}
+
+#sell button{
+width:100%;
+padding:16px;
+border:none;
+border-radius:12px;
+background:linear-gradient(90deg,#00bfff,#7b2cff);
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+left:20px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+text-decoration:none;
+color:white;
+box-shadow:0 0 25px rgba(37,211,102,.5);
+z-index:999;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:38px;
+}
+
+.navbar{
+justify-content:center;
+gap:20px;
+}
+
+.navbar ul{
+margin-top:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.section-title{
+font-size:28px;
+}
+
+}
