@@ -26,9 +26,11 @@ async function loadAccounts() {
     container.innerHTML += `
       <div class="account-card">
 
-        <a href="${acc.image}" target="_blank">
-  <img src="${acc.image}" alt="${acc.name}">
-</a>
+       <img
+src="${acc.image}"
+alt="${acc.name}"
+class="preview-image"
+data-image="${acc.image}">
 
         <div class="account-info">
 
@@ -118,3 +120,40 @@ if (sellBtn) {
 }
 
 loadAccounts();
+document.addEventListener("click",(e)=>{
+
+if(e.target.classList.contains("preview-image")){
+
+const modal =
+document.getElementById("imageModal");
+
+const modalImage =
+document.getElementById("modalImage");
+
+modal.style.display = "flex";
+
+modalImage.src =
+e.target.dataset.image;
+
+}
+
+});
+
+document.querySelector(".close-modal")
+.addEventListener("click",()=>{
+
+document.getElementById("imageModal")
+.style.display = "none";
+
+});
+
+document.getElementById("imageModal")
+.addEventListener("click",(e)=>{
+
+if(e.target.id==="imageModal"){
+
+e.currentTarget.style.display="none";
+
+}
+
+});
